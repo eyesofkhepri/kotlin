@@ -23,4 +23,10 @@
 ## Chapter03
 
 1. CreateCollection.kt : 컬랙션 생성, 자바 컬랙션을 사용하는 이유 설명
-2. EasyCallFun.kt : 
+2. EasyCallFun.kt :  함수 호출시 인자에 이름 붙이는 방법 설명, 디폴트 파라메터 설명
+3. UseJoin.java : Kotlin은 클래스 외부에 함수를 선언할수 있으며 컴파일시 어떻게 변환되는지 그것을 어떻게 쓰는지 설명한다. @JvmName을 통해 클래스의 이름을 설정할 수 있고 사용하는 방법 설명.
+4. TopProperties.kt : 클래스 외부에 함수를 선언한것 처럼 프로퍼티도 클래스 외부에 선언이 가능하다. static final같은 상수 변수를 만드는 방법 const를 설명한다.
+5. ExpendFun.kt : 확장 함수 선언 및 사용
+6. use/UseExpendFun.kt : 확장 함수 사용시 import해야 함을 설명 중복의 문제로 인해서 import를 통해 사용하도록 한다. 동일 패키지내에 동일한 이름을 갖는 확장 함수는 컴파일 단계에서 허용하지 않는다. 중복되는 확장함수를 가진 Class를 import할경우도 컴파일 단계에서 허용하지 않는다.
+7. UseExpendJoin.kt : 확장함수를 사용해서 간단한 기능을 구현해본다.
+8. NotOverrideExpendFun.kt : 확장 함수는 오버라이드 하지 못함을 설명한다. 확장함수는 선언한 클래스안에 생성이 되는것이 아니라 파일이름으로 생성되는 클래스 안에 static으로 생성이 된다.

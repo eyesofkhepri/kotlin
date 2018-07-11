@@ -1,29 +1,40 @@
-// 패키지 선언
+// 코틀린 최상위 함수가 포함되는 클래스 이름을 바꾸고 싶으면 아래 JvmName 어노테이션을 사용한다.
+@file:JvmName("Good")
+
 package com.eyesofkhepri.kotlin.chapter03
 
-
-
 fun main(args: Array<String>) {
-    // 숫자로 이루어진 집합 생성
-    val set = hashSetOf<Int>(1, 7, 53)
-    // 숫자로 이루어진 리스트 생성
-    val list = arrayListOf(1, 7, 53)
-    // 맵 생성
-    val map = hashMapOf(1 to "one", 7 to "seven", 53 to "fifty-three")
+    val list = listOf(1, 2, 3)
+    println(list)   // list 컬랙션의 toString호출 됨
 
-    // javaClass는 자바의 getClass()에 해당하는 코틀린 코드다
-    println(set.javaClass)  // java.util.HashSet
-    println(list.javaClass) // java.util.ArrayList
-    println(map.javaClass)  // java.util.HashMap
+    // 인자는 함수의 시그니쳐를 외우던가 해야 할수 있다. 즉 어떤 인자가 어떤인자인지 모르고 갯수도 모르는상태...
+    //println(joinToString(list, "; ", "(", ")"))
 
-    // 위를 보면 코틀린이 자신만의 컬랙션 기능을 제공하지 않고 기존 자바 컬렉션을 사용하는 것을 알 수 있다.
-    // 코틀린 만의 컬렉션이 없는 이유는 Java와 호환을 위해서 이다. 각각의 컬랙션이 따로 존재한다면 문제가 상호간의 변화같은게 필요하기 때문이다.
+    // 코틀린은 해당 함수의 인자를 아래와 같이 명시 할 수 있다. 좀더 명확히 어떤 인자를 넘기는지 알수 있다.
+    println(joinToString(list, separator = "; ", prefix = "(", postfix = ")"))
 
-    // 코틀린은 java보다 컬랙션을 사용하는 많은 기능을 제공한다.
-    val strings = listOf("first", "second", "fourteenth")
-    println(strings.last()) // 마지막 값 가져오기
+    // 함수 실행시 없는 인자는 디폴트 파라메터가 알아서 넣어준다.
+    println(joinToString(list))
+}
 
-    val numbers = setOf(1, 14, 2)
-    println(numbers.max())  // 가장 큰 값 가져오기
+// 컬랙션 받아서 prefix, postfix붙이고 컬랙션 사이사이 separator를 넣는 함수
+// joinToString은 Class와 상관없이 선언이 되어 있다. 실제 이것은 파일이름 클래스 안에 선언이 된다. UseJoin.java에서 어떻게 사용하는지 살펴보자
+fun <T> joinToString(
+        collection: Collection<T>,
+        separator: String = ", ", // 함수 선언시 Default파라메터를 지정할 수 있다.
+        prefix: String = "", // 만약 함수 실행시 값을 넘겨주지 않는다 하더라도
+        postfix: String = "") // Default 파라메터가 알아서 들어가게 된다.
+    : String {
+    val result = StringBuilder(prefix)
 
+    for((idx, el) in collection.withIndex()) {
+        if(idx > 0) {
+            result.append(separator)    // 최초에는 separator를 넣으면 안된다.
+        }
+
+        result.append(el)
+    }
+
+    result.append(postfix)
+    return result.toString()
 }
