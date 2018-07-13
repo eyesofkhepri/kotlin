@@ -30,3 +30,12 @@
 6. use/UseExpendFun.kt : 확장 함수 사용시 import해야 함을 설명 중복의 문제로 인해서 import를 통해 사용하도록 한다. 동일 패키지내에 동일한 이름을 갖는 확장 함수는 컴파일 단계에서 허용하지 않는다. 중복되는 확장함수를 가진 Class를 import할경우도 컴파일 단계에서 허용하지 않는다.
 7. UseExpendJoin.kt : 확장함수를 사용해서 간단한 기능을 구현해본다.
 8. NotOverrideExpendFun.kt : 확장 함수는 오버라이드 하지 못함을 설명한다. 확장함수는 선언한 클래스안에 생성이 되는것이 아니라 파일이름으로 생성되는 클래스 안에 static으로 생성이 된다.
+9. ExpendProperties.kt : 확장 프로퍼티에 관해서 설명한다.
+10. DynamicParameterFun.kt : 가변 인자 함수에 관해서 설명한다.
+11. InfixCalling.kt : 중위 호출에 관해서 설명한다. 구조분해 설명
+12. ThreeDot.kt : 3중 따옴표를 통해서 문자열을 내마음대로 만드는 방법을 설명한다.
+
+## Chapter04
+
+1. UsingInterface.kt : 인터페이스 생성 및 구현, 디폴트 메소드 생성 및 사용법 설명
+2. ExtendsClass.kt : 클래스 확장 설명
