@@ -47,4 +47,7 @@
 8. SecondConstructor.kt : 부생성자 설명
 9. ImplInterfaceProperty.kt : 인터페이스에 잇는 속성 구현, 속성에 대한 초기화 방안 3가지를 설명한다. 또한 getter, setter의 뒷받침 필드에 접근하고 사용하는 방법을 설명한다.
 10. ChangedViews.kt : 접근자의 가시성 변경방법에 관해 설명
-11. OverrideDefaultMethods.kt : 모든 클래스가 정의할 메소드 오버라이드
+11. OverrideDefaultMethods.kt : 모든 클래스가 정의할 메소드 오버라이드, 이런 기본적인 메소드 자동 생성
+12. MandateClass.kt : 데코레이터 패턴을 사용해 대상이될 메소드의 생성 위임을 by 키워드를 사용한 클래스에게 구현에 대한 행동을 위임 시키는 방법에 관해 설명한다.
+13. ObjectKeyword.kt : object 키워드를 사용한 싱글톤 사용하는 방법에 관해 설명한다.
+14. ObjectFactoryStatic.kt : object 키워드를 사용해서 팩토리 메소드와 정적 멤버 생성 방법을 설명한다.
