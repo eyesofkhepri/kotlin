@@ -23,5 +23,15 @@ fun main(args: Array<String>) {
     // println("$koNameGood"); 에러남
     println("${koName}님 안녕하세요.")    // ${}형태로 사용해야 한다.
 
+    val violet = "바이올렛"
 
+
+    println("$violet")
+    println("$violet,")
+    // 변수 이름을 의미할수 있는 그 무엇이라도 오류를 발생한다. 하지만 들어가면 오류가나는 특수기호는 특수기호를 제외한 나머지를 변수로 인식한다.
+//    println("$violet강")
+//    println("$violet조")
+//    println("$violetcho")
+    // 그냥 문자로 인식한다.
+    println("$1violet")
 }

@@ -5,6 +5,7 @@ fun main(args: Array<String>) {
     println(getMnemonic(FreeColor.RED));
     println(mix(FreeColor.RED, FreeColor.YELLOW))
     println(maxOptimized(FreeColor.RED, FreeColor.YELLOW))
+    println(getMnemonic3())
 }
 
 // 일반적인 사용방식
@@ -23,6 +24,39 @@ enum class FreeColor(val r: Int, val g: Int, val b: Int) { // 프로퍼티 정�
     // 사용법은 FreeColor.RED.rgb() 이런식으로 사용이 된다.
     fun rgb() = (r * 256 + g) * 256 + b
 }
+
+interface MouseAdapter {
+    fun mouseClicked(e: String)
+}
+
+class Mouse {
+    companion object {
+        fun mouseListner(m: MouseAdapter) {
+            m.mouseClicked("test");
+        }
+    }
+}
+
+fun getMnemonic1(color: FreeColor) =
+        when(1+1) { // 식이 들어올 수 있다.
+            2 -> "숫자2"
+            else -> "숫자3"
+        }
+
+
+fun getMnemonic3() =
+        when(object: com.eyesofkhepri.kotlin.chapter04.MouseAdapter {   // 무명 객체도 들어올 수 있다.
+            override fun mouseClicked(e: String) {
+            }
+        }) { // 식이 들어올 수 있다.
+            else -> "숫자3"
+        }
+
+fun getMnemonic2(color: FreeColor) =
+        when(if(1>0) 1 else 2) {    // if도 식이기 때문에 사용이 가능하다.
+            2 -> "숫자2"
+            else -> "숫자3"
+        }
 
 fun getMnemonic(color: FreeColor) =
     when(color) {
