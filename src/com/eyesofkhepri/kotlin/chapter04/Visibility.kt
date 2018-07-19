@@ -7,7 +7,6 @@ fun main(args: Array<String>) {
 internal open class TalkativeButton : Focusable {
     private fun yell() = println("Hey!")
     protected fun whisper() = println("Let's talk")
-
 }
 
 // TalkativeButton이 internal이기 때문에 오류가 발생한다

@@ -2,11 +2,11 @@
 
 ## Chapter01
 
-1. First : 예제 테스트
+1. First : 클래스를 생성하고 List 변수를 생성해서 리스트의 maxBy함수를 사용해 출력하는 간단한 코드를 설명한다.
 
 ## Chapter02
 
-1. HelloWorld.kt : Hello World 출력 방법과 함수선언에 대해 간략 설명
+1. HelloWorld.kt : Main함수에서 Hello world를 출력하는 아주 간단 한 코드
 2. Max.kt : 함수 인자 설명 및 if가 식으로써 사용됨을 확인 할 수 있다.
 3. SimpleMax.kt : 식을 사용하는 함수를 간략히 코드를 줄이는 방법을 확인 할 수 있다.
 4. Variable.kt : 변수 선언시 var과 val에 관해서 설명을 하고 있다.
@@ -51,3 +51,7 @@
 12. MandateClass.kt : 데코레이터 패턴을 사용해 대상이될 메소드의 생성 위임을 by 키워드를 사용한 클래스에게 구현에 대한 행동을 위임 시키는 방법에 관해 설명한다.
 13. ObjectKeyword.kt : object 키워드를 사용한 싱글톤 사용하는 방법에 관해 설명한다.
 14. ObjectFactoryStatic.kt : object 키워드를 사용해서 팩토리 메소드와 정적 멤버 생성 방법을 설명한다.
+15. CompanionNomal.kt : Companion object를 일반 객체처럼 사용하는 방법 설명. 동반객체에 interface를 구현해서 사용하는 것을 설명한다.
+16. ExtendMethodByCompanion.kt : companion object에 확장 함수를 넣는 방법을 설명한다.
+17. AnonymousFunction.kt : 무명 내부 클래스를 작성
+ 
