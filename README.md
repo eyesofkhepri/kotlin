@@ -135,3 +135,7 @@ ENUM 클래스 Color와 FreeColor를 선언하고 이 클래스를 사용하는 
 16. ExtendMethodByCompanion.kt : companion object에 확장 함수를 넣는 방법을 설명한다.
 17. AnonymousFunction.kt : 무명 내부 클래스를 작성
  
+## Chapter5
+
+1. DirectCollectionByLamdaLoop : 람다식을 사용하지 않고 컬랙션을 직접 검색하는 예제와 람다식을 사용한 예제이다.
+2. UseValInLamda.kt : 람다식안에서 변수에 접근 하는 예제이다.
