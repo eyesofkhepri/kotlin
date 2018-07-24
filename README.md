@@ -139,3 +139,11 @@ ENUM 클래스 Color와 FreeColor를 선언하고 이 클래스를 사용하는 
 
 1. DirectCollectionByLamdaLoop : 람다식을 사용하지 않고 컬랙션을 직접 검색하는 예제와 람다식을 사용한 예제이다.
 2. UseValInLamda.kt : 람다식안에서 변수에 접근 하는 예제이다.
+3. MemberReference.kt : 맴버참조를 사용하는 예제이다.
+4. FilterAndMap.kt : filter와 map을 사용하는 예제이다.
+5. AllAnyCountFind.kt : All, Any, Count, Find를 사용하는 예제이다.
+6. GroupBy.kt : GroupBy를 사용하는 예제이다.
+7. FlatMapFlatten.kt : FlatMap과 Flatten을 사용하는 예제이다. 
+8. LazyOperation.kt : Sequence를 사용한 지연 연산에 관한 예제이다.
+9. WithApply.kt : with와 apply 사용 예제이다.
+
